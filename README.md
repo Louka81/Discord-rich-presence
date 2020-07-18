@@ -1,7 +1,7 @@
 # [Discord-Rich-Presence](https://github.com/FlaringPhoenix/Discord-Rich-Presence) 
 A better status for you discord client!
 
-[![Homepage](https://img.shields.io/badge/M-Homepage-7289DA.svg?style=flat-square)](http://bluefox.tech/)
+[![Homepage](https://img.shields.io/badge/M-Homepage-7289DA.svg?style=flat-square)](https://bluefox.tech/)
 [![Support](https://img.shields.io/badge/M-Support-7289DA.svg?style=flat-square)](https://discord.gg/tvs98b5)
 
 ## Features
