@@ -22,7 +22,7 @@ A better status for you discord client!
  - Upload your images
  - Put the image names in config.js
 
-3. Run "npm i" in the BlueFox-RP directory
+3. Run "start.bat"
 
 ## Support
    Discord support server! [Join](https://discord.gg/tvs98b5)
