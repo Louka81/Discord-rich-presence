@@ -5,6 +5,5 @@ function placeholderParse(str) {
 }
 
 module.exports = {
-    checkInternet,
     placeholderParse
 }

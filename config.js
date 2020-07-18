@@ -6,14 +6,18 @@ Placeholders: (Used for statusMsg)
 %RAM% - Displays the amount of ram being used by this program
 */
 
-let statusMsg = [
+let statusMsg = [ // set largeImageHover or smallImageHover to "" to disable it
     {
         details: "Details 1", // The top line of the presence
-        state: "State 1" // The bottom line of the presence
+        state: "State 1", // The bottom line of the presence
+        largeImageHover: "Text", // Text on hover for large image
+        smallImageHover: "Text" // Text on hover for small image
     },
     {
-        details: "Details 2",
-        state: "State 2"
+        details: "Details 2", // The top line of the presence
+        state: "State 2", // The bottom line of the presence
+        largeImageHover: "", // Text on hover for large image
+        smallImageHover: "" // Text on hover for small image
     }
 ]
 
@@ -23,7 +27,7 @@ let statusSettings = {
 }
 
 let timeSettings = {
-    enabled: true,
+    enabled: false,
     countdown: { // Displays "00:00:00 Left"
         enabled: false,
         time: 1595003884, // In unix timestamp https://www.epochconverter.com/

@@ -50,11 +50,11 @@ setInterval(async () => {
 
     let running = moment.duration((new Date())-startDate).format(' D [days], H [hrs], m [mins], s [secs]');
 
-    let s = c.statusSettings.random ? c.statusMsg[index].state : c.statusMsg[0].state;
-    let d = c.statusSettings.random ? c.statusMsg[index].details : c.statusMsg[0].details;
+    let s = c.statusSettings.random ? helper.placeholderParse(c.statusMsg[index].state) : helper.placeholderParse(c.statusMsg[0].state);
+    let d = c.statusSettings.random ? helper.placeholderParse(c.statusMsg[index].details) : helper.placeholderParse(c.statusMsg[0].details);
 
-    s = helper.placeholderParse(s);
-    d = helper.placeholderParse(d);
+    let largeHover = c.statusSettings.random ? c.statusMsg[index].largeImageHover : c.statusMsg[0].largeImageHover;
+    let smallHover = c.statusSettings.random ? c.statusMsg[index].smallImageHover : c.statusMsg[0].smallImageHover;
 
     try {
 
@@ -67,6 +67,8 @@ setInterval(async () => {
                     endTimestamp: c.timeSettings.countdown.time,
                     largeImageKey: c.images.large ? c.images.large : null,
                     smallImageKey: c.images.small ? c.images.small : null,
+                    largeImageText: largeHover ? largeHover : null,
+                    smallImageText: smallHover ? smallHover : null,
                     instance: c.instance ? c.instance : true
                 });
             } else if (c.timeSettings.elapsed.enabled) {
@@ -76,6 +78,8 @@ setInterval(async () => {
                     startTimestamp: now,
                     largeImageKey: c.images.large ? c.images.large : null,
                     smallImageKey: c.images.small ? c.images.small : null,
+                    largeImageText: largeHover ? largeHover : null,
+                    smallImageText: smallHover ? smallHover : null,
                     instance: c.instance ? c.instance : true
                 });
             }
@@ -85,11 +89,15 @@ setInterval(async () => {
                 details: d,
                 largeImageKey: c.images.large ? c.images.large : null,
                 smallImageKey: c.images.small ? c.images.small : null,
+                largeImageText: largeHover ? largeHover : null,
+                smallImageText: smallHover ? smallHover : null,
+                partySize: 1,
+                partyMax: 4,
                 instance: c.instance ? c.instance : true
         });
 
         }
-        console.log(`Updated Status: (Running for ${running})\n- Details: ${d}\n- State: ${s}`)
+        console.log(`Updated Status: (Running for ${running})\n- Details: ${d}\n- State: ${s}\n- LargeImageHover: ${largeHover}\n- SmallImageHover: ${smallHover}`)
     } catch (e) {
         console.error(`Failed to update presence!`);
     }
