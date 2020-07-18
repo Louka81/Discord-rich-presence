@@ -100,7 +100,7 @@ setInterval(async () => {
         console.error(`Failed to update presence!`);
     }
 
-}, isNaN(c.statusSettings.delay) && c.statusSettings.delay >= 1000 ? c.statusSettings.delay : 5000);
+}, c.statusSettings.delay >= 1000 ? c.statusSettings.delay : 5000);
 
 let endDate = new Date();
 
