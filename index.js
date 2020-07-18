@@ -91,8 +91,6 @@ setInterval(async () => {
                 smallImageKey: c.images.small ? c.images.small : null,
                 largeImageText: largeHover ? largeHover : null,
                 smallImageText: smallHover ? smallHover : null,
-                partySize: 1,
-                partyMax: 4,
                 instance: c.instance ? c.instance : true
         });
 
