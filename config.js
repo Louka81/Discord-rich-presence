@@ -41,6 +41,7 @@ let images = { // Your images that you uploaded to your application
 
 let instance = true; // Do not change
 
+// Do not edit this!
 module.exports = {
     clientID,
     statusMsg,
