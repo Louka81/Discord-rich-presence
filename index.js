@@ -43,6 +43,8 @@ console.log(`\x1b[37m`)
 
 let now = new Date();
 
+let last = 0;
+
 // Try to update presence
 setInterval(async () => {
 
@@ -50,11 +52,17 @@ setInterval(async () => {
 
     let running = moment.duration((new Date())-startDate).format(' D [days], H [hrs], m [mins], s [secs]');
 
-    let s = c.statusSettings.random ? helper.placeholderParse(c.statusMsg[index].state) : helper.placeholderParse(c.statusMsg[0].state);
-    let d = c.statusSettings.random ? helper.placeholderParse(c.statusMsg[index].details) : helper.placeholderParse(c.statusMsg[0].details);
+    let s = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].state) : helper.placeholderParse(c.statusMsg[last].state);
+    let d = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].details) : helper.placeholderParse(c.statusMsg[last].details);
 
-    let largeHover = c.statusSettings.random ? c.statusMsg[index].largeImageHover : c.statusMsg[0].largeImageHover;
-    let smallHover = c.statusSettings.random ? c.statusMsg[index].smallImageHover : c.statusMsg[0].smallImageHover;
+    let largeHover = c.statusSettings.random ? c.statusMsg[index].largeImageHover : c.statusMsg[last].largeImageHover;
+    let smallHover = c.statusSettings.random ? c.statusMsg[index].smallImageHover : c.statusMsg[last].smallImageHover;
+
+    if (last != (c.statusMsg.length-1)) {
+        last=last+1;
+    } else {
+        last = 0;
+    }
 
     try {
 

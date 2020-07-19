@@ -22,7 +22,7 @@ let statusMsg = [ // set largeImageHover or smallImageHover to "" to disable it
 ]
 
 let statusSettings = {
-    random: true, // Pick random status messages ^
+    random: false, // Pick random status messages - Disabling this will cause it to go through the statuses in order
     delay: 5000, // Milliseconds - Must be above 1000
 }
 
