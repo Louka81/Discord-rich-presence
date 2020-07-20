@@ -1,4 +1,4 @@
-let clientID = ""; // Your clientID from your application
+let clientID = "733342259524927520"; // Your clientID from your application - https://discord.com/developers/applications
 
 /*
 Placeholders: (Used for statusMsg)
@@ -23,7 +23,7 @@ let statusMsg = [ // set largeImageHover or smallImageHover to "" to disable it
 
 let statusSettings = {
     random: false, // Pick random status messages - Disabling this will cause it to go through the statuses in order
-    delay: 5000, // Milliseconds - Must be above 1000
+    delay: 5000, // Milliseconds - Must be above 5000 (Anything below will cause errors!)
 }
 
 let timeSettings = {
@@ -38,14 +38,15 @@ let timeSettings = {
     }
 }
 
-let images = { // Your images that you uploaded to your application
+let images = { // Your images that you uploaded to your application - "" to disable an image
     large: 'bluefox',
     small: 'bluefox'
 }
 
-let instance = true; // Do not change
+// Do not change
+let instance = true;
 
-// Do not edit this!
+// Do not edit/touch this!
 module.exports = {
     clientID,
     statusMsg,
