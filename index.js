@@ -50,13 +50,16 @@ setInterval(async () => {
 
     let index = Math.floor(Math.random() * (c.statusMsg.length - 0) + 0);
 
-    let running = moment.duration((new Date())-startDate).format(' D [days], H [hrs], m [mins], s [secs]');
+    let running = moment.duration((new Date())-startDate).format(' D[d], H[h], m[m], s[s]');
 
     let s = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].state) : helper.placeholderParse(c.statusMsg[last].state);
     let d = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].details) : helper.placeholderParse(c.statusMsg[last].details);
 
     let largeHover = c.statusSettings.random ? c.statusMsg[index].largeImageHover : c.statusMsg[last].largeImageHover;
     let smallHover = c.statusSettings.random ? c.statusMsg[index].smallImageHover : c.statusMsg[last].smallImageHover;
+
+    let partySize = c.statusSettings.random ? c.statusMsg[index].partySize : c.statusMsg[last].partySize;
+    let partyMax = c.statusMsg.random ? c.statusMsg[index].partyMax : c.statusMsg[last].partyMax;
 
     if (last != (c.statusMsg.length-1)) {
         last=last+1;
@@ -77,6 +80,8 @@ setInterval(async () => {
                     smallImageKey: c.images.small ? c.images.small : null,
                     largeImageText: largeHover ? largeHover : null,
                     smallImageText: smallHover ? smallHover : null,
+                    partySize: partySize,
+                    partyMax: partyMax,
                     instance: c.instance ? c.instance : true
                 });
             } else if (c.timeSettings.elapsed.enabled) {
@@ -88,6 +93,8 @@ setInterval(async () => {
                     smallImageKey: c.images.small ? c.images.small : null,
                     largeImageText: largeHover ? largeHover : null,
                     smallImageText: smallHover ? smallHover : null,
+                    partySize: partySize,
+                    partyMax: partyMax,
                     instance: c.instance ? c.instance : true
                 });
             }
@@ -99,11 +106,13 @@ setInterval(async () => {
                 smallImageKey: c.images.small ? c.images.small : null,
                 largeImageText: largeHover ? largeHover : null,
                 smallImageText: smallHover ? smallHover : null,
+                partySize: partySize,
+                partyMax: partyMax,
                 instance: c.instance ? c.instance : true
         });
 
         }
-        console.log(`Updated Status: (Running for ${running})\n- Details: ${d}\n- State: ${s}\n- LargeImageHover: ${largeHover}\n- SmallImageHover: ${smallHover}`)
+        console.log(`Updated Status: [DURATION: ${running}] [RAM: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB]\n- Details: ${d}\n- State: ${s}\n- LargeImageHover: ${largeHover}\n- SmallImageHover: ${smallHover}`)
     } catch (e) {
         console.error(`Failed to update presence!`);
     }

@@ -1,4 +1,4 @@
-let clientID = "733342259524927520"; // Your clientID from your application - https://discord.com/developers/applications
+let clientID = ""; // Your clientID from your application - https://discord.com/developers/applications
 
 /*
 Placeholders: (Used for statusMsg)
@@ -6,18 +6,26 @@ Placeholders: (Used for statusMsg)
 %RAM% - Displays the amount of ram being used by this program
 */
 
-let statusMsg = [ // set largeImageHover or smallImageHover to "" to disable it
+let statusMsg = [
     {
         details: "Details 1", // The top line of the presence
         state: "State 1", // The bottom line of the presence
+
+        // Set either to "" to disable - Will be displayed on image hover
         largeImageHover: "Text", // Text on hover for large image
-        smallImageHover: "Text" // Text on hover for small image
+        smallImageHover: "Text", // Text on hover for small image
+
+        // Set both to 0 to disable - Will display (size of max) next to the state
+        partySize: 1,
+        partyMax: 2
     },
     {
-        details: "Details 2", // The top line of the presence
-        state: "State 2", // The bottom line of the presence
-        largeImageHover: "", // Text on hover for large image
-        smallImageHover: "" // Text on hover for small image
+        details: "Details 2",
+        state: "State 2",
+        largeImageHover: "",
+        smallImageHover: "",
+        partySize: 0,
+        partyMax: 0
     }
 ]
 
