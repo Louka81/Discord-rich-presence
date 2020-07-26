@@ -1,10 +1,16 @@
-let clientID = ""; // Your clientID from your application - https://discord.com/developers/applications
+/**
+ * BlueFox Rich Presence - Developed by FlaringPhoenix.
+ * All rights reserved 2020.
+ * Creation Date: 7/18/2020
+ */
 
 /*
 Placeholders: (Used for statusMsg)
 
 %RAM% - Displays the amount of ram being used by this program
 */
+
+let clientID = ""; // Your clientID from your application - https://discord.com/developers/applications
 
 let statusMsg = [
     {

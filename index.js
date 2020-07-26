@@ -1,3 +1,9 @@
+/**
+ * BlueFox Rich Presence - Developed by FlaringPhoenix.
+ * All rights reserved 2020.
+ * Creation Date: 7/18/2020
+ */
+
 let startDate = new Date();
 
 // Load dependencies
@@ -55,8 +61,8 @@ setInterval(async () => {
     let s = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].state) : helper.placeholderParse(c.statusMsg[last].state);
     let d = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].details) : helper.placeholderParse(c.statusMsg[last].details);
 
-    let largeHover = c.statusSettings.random ? c.statusMsg[index].largeImageHover : c.statusMsg[last].largeImageHover;
-    let smallHover = c.statusSettings.random ? c.statusMsg[index].smallImageHover : c.statusMsg[last].smallImageHover;
+    let largeHover = c.statusSettings.random ?  helper.placeholderParse(c.statusMsg[index].largeImageHover) :  helper.placeholderParse(c.statusMsg[last].largeImageHover);
+    let smallHover = c.statusSettings.random ?  helper.placeholderParse(c.statusMsg[index].smallImageHover) :  helper.placeholderParse(c.statusMsg[last].smallImageHover);
 
     let partySize = c.statusSettings.random ? c.statusMsg[index].partySize : c.statusMsg[last].partySize;
     let partyMax = c.statusMsg.random ? c.statusMsg[index].partyMax : c.statusMsg[last].partyMax;
@@ -82,7 +88,7 @@ setInterval(async () => {
                     smallImageText: smallHover ? smallHover : null,
                     partySize: partySize,
                     partyMax: partyMax,
-                    instance: c.instance ? c.instance : true
+                    instance: c.instance ? c.instance : false
                 });
             } else if (c.timeSettings.elapsed.enabled) {
                 await client.updatePresence({
@@ -95,7 +101,7 @@ setInterval(async () => {
                     smallImageText: smallHover ? smallHover : null,
                     partySize: partySize,
                     partyMax: partyMax,
-                    instance: c.instance ? c.instance : true
+                    instance: c.instance ? c.instance : false
                 });
             }
         } else {
