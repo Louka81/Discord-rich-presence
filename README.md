@@ -10,6 +10,12 @@ A better status for you discord client!
 - Countdown in Status
 - Time Elapsed in Status
 - Custom Images in Status
+- Party system
+
+## Requirements
+- NodeJS
+- Windows
+- Discord
 
 ## Steps
 1. Register a rich presence application with discord
