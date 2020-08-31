@@ -1,7 +1,7 @@
 # [Discord-Rich-Presence](https://github.com/FlaringPhoenix/Discord-Rich-Presence) 
 A better status for you discord client!
 
-[![Homepage](https://img.shields.io/badge/M-Homepage-7289DA.svg?style=flat-square)](https://bluefox.tech/)
+[![Homepage](https://img.shields.io/badge/M-Homepage-7289DA.svg?style=flat-square)](https://bluefoxhost.com/)
 [![Support](https://img.shields.io/badge/M-Support-7289DA.svg?style=flat-square)](https://discord.gg/tvs98b5)
 
 ## Features
@@ -34,4 +34,4 @@ A better status for you discord client!
    Discord support server! [Join](https://discord.gg/tvs98b5)
 
 ## License
-[Chrome-Downloads-Organizer](https://github.com/FlaringPhoenix/Discord-Rich-Presence) is released under [MIT license](https://github.com/FlaringPhoenix/Discord-Rich-Presence/blob/master/LICENSE) . Copyright (c) [FlaringPhoenix](https://github.com/FlaringPhoenix).
+[Discord-Rich-Presence](https://github.com/FlaringPhoenix/Discord-Rich-Presence) is released under [MIT license](https://github.com/FlaringPhoenix/Discord-Rich-Presence/blob/master/LICENSE) . Copyright (c) [FlaringPhoenix](https://github.com/FlaringPhoenix).
