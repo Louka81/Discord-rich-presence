@@ -10,7 +10,7 @@ Placeholders: (Used for statusMsg)
 %RAM% - Displays the amount of ram being used by this program
 */
 
-let clientID = ""; // Your clientID from your application - https://discord.com/developers/applications
+let clientID = "734653797716197377"; // Your clientID from your application - https://discord.com/developers/applications
 
 let statusMsg = [
     {

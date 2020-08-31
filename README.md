@@ -31,7 +31,7 @@ A better status for you discord client!
 3. Run "start.bat"
 
 ## Support
-   Discord support server! [Join](https://discord.gg/tvs98b5)
+   Discord support server! [Join](https://discord.gg/AWZYysZ)
 
 ## License
 [Discord-Rich-Presence](https://github.com/FlaringPhoenix/Discord-Rich-Presence) is released under [MIT license](https://github.com/FlaringPhoenix/Discord-Rich-Presence/blob/master/LICENSE) . Copyright (c) [FlaringPhoenix](https://github.com/FlaringPhoenix).
