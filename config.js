@@ -10,7 +10,7 @@ Placeholders: (Used for statusMsg)
 %RAM% - Displays the amount of ram being used by this program
 */
 
-let clientID = "734653797716197377"; // Your clientID from your application - https://discord.com/developers/applications
+let clientID = ""; // Your clientID from your application - https://discord.com/developers/applications
 
 let statusMsg = [
     {
@@ -37,6 +37,7 @@ let statusMsg = [
 
 let statusSettings = {
     random: false, // Pick random status messages - Disabling this will cause it to go through the statuses in order
+    static: true, // Static status - Will only display the first statusMsg
     delay: 5000, // Milliseconds - Must be above 5000 (Anything below will cause errors!)
 }
 
@@ -57,6 +58,17 @@ let images = { // Your images that you uploaded to your application - "" to disa
     small: 'bluefox'
 }
 
+let logging = {
+    ram: true,
+    duration: {
+        enabled: true,
+        format: ' D[d], H[h], m[m], s[s]'
+    },
+    details: true,
+    state: true,
+    images: true
+}
+
 // Do not change
 let instance = true;
 
@@ -67,5 +79,6 @@ module.exports = {
     statusSettings,
     timeSettings,
     images,
+    logging,
     instance
 }

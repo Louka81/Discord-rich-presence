@@ -56,7 +56,7 @@ setInterval(async () => {
 
     let index = Math.floor(Math.random() * (c.statusMsg.length - 0) + 0);
 
-    let running = moment.duration((new Date())-startDate).format(' D[d], H[h], m[m], s[s]');
+    let running = moment.duration((new Date())-startDate).format(c.logging.duration.format);
 
     let s = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].state) : helper.placeholderParse(c.statusMsg[last].state);
     let d = c.statusSettings.random == true ? helper.placeholderParse(c.statusMsg[index].details) : helper.placeholderParse(c.statusMsg[last].details);
@@ -115,10 +115,17 @@ setInterval(async () => {
                 partySize: partySize,
                 partyMax: partyMax,
                 instance: c.instance ? c.instance : true
-        });
-
+            });
         }
-        console.log(`Updated Status: [DURATION: ${running}] [RAM: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB]\n- Details: ${d}\n- State: ${s}\n- LargeImageHover: ${largeHover}\n- SmallImageHover: ${smallHover}`)
+
+        let l = `Updated Status:`;
+        l = l + (c.logging.duration.enabled ? `[DURATION: ${running}]` : "");
+        l = l + (c.logging.ram ? ` [RAM: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB]` : "");
+        l = l + (c.logging.details ? `\n- Details: ${d}` : "");
+        l = l + (c.logging.state ? `\n- State: ${s}` : "");
+        l = l + (c.logging.images ? `\n- LargeImageHover: ${largeHover}\n- SmallImageHover: ${smallHover}` : "");
+
+        console.log(l)
     } catch (e) {
         console.error(`Failed to update presence!`);
     }
