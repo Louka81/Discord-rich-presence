@@ -22,7 +22,7 @@ try {
 }
 
 // Check if there is a clientID
-if (!c.clientID) { return console.error("Ooops - You forgot to add your clientID in the \"config.js\"");}
+if (!c.clientID) { return console.error("Oops - You forgot to add your clientID in the \"config.js\"");}
 
 // Try to load functions.js
 try {
