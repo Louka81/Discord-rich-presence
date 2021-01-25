@@ -1,8 +1,7 @@
-# [Discord-Rich-Presence](https://github.com/FlaringPhoenix/Discord-Rich-Presence) 
+# [Discord-Rich-Presence](https://github.com/Louka81/Discord-rich-presence) 
 A better status for you discord client!
 
-[![Homepage](https://img.shields.io/badge/M-Homepage-7289DA.svg?style=flat-square)](https://bluefoxhost.com/)
-[![Support](https://img.shields.io/badge/M-Support-7289DA.svg?style=flat-square)](https://discord.gg/tvs98b5)
+[![Support](https://img.shields.io/badge/M-Support-7289DA.svg?style=flat-square)](https://discord.gg/tXTHgT4hjy)
 
 ## Features
 - Multiple Statuses
@@ -31,7 +30,7 @@ A better status for you discord client!
 3. Run "start.bat"
 
 ## Support
-   Discord support server! [Join](https://discord.gg/AWZYysZ)
+   Discord support server! [Join](https://discord.gg/tXTHgT4hjy)
 
 ## License
-[Discord-Rich-Presence](https://github.com/FlaringPhoenix/Discord-Rich-Presence) is released under [MIT license](https://github.com/FlaringPhoenix/Discord-Rich-Presence/blob/master/LICENSE) . Copyright (c) [FlaringPhoenix](https://github.com/FlaringPhoenix).
+[Discord-Rich-Presence](https://github.com/Louka81/Discord-rich-presence) is released under [MIT license](https://github.com/Louka81/Discord-rich-presence/blob/master/LICENSE) . Copyright (c) [Louka81](https://github.com/Louka81).
